@@ -1,5 +1,10 @@
 ### Hi there 👋
 
+- 🔭 I’m currently looking for job  
+- 🌱 I’m currently learning PHP/Laravel/Igniter
+- 🤔 I’m looking for help with news portal 
+- 📫 How to reach me: mail
+
 <!--
 **diegodario88/diegodario88** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
