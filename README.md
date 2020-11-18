@@ -1,21 +1,25 @@
-### Hi there 👋
+## Diego Dario, vulgo "logan"  
 
-- 🔭 I’m currently looking for job  
-- 🌱 I’m currently learning PHP/Laravel/Igniter
-- 🤔 I’m looking for help with news portal app
-- 📫 How to reach me: mail 
+Entusiasta da computação, Professor / Desenvolvedor e eterno aluno da tecnologia da informação.
 
-<!--
-**diegodario88/diegodario88** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Experiência em:
+- Linguagem de programação: PHP, Javascript, C#;
+- Banco de dados: Sql, MySql, NoSql;
+- Frameworks: CodeIgniter4, Laravel e Bootstrap;
+- Testes unitários;
+- Docker;
+- React;
+- Redis e Mongo;
+- Github e Git;
 
-Here are some ideas to get you started:
+Conhecimento de padrão de arquitetura: MVC;
+Conhecimento em metodologias Ágeis;
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<center>
+<table>
+    <tr>
+        <td><img width="400px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegodario88&hide=html&layout=compact" /></td>
+        <td><img width="495px" align="left" src="https://github-readme-stats.vercel.app/api?username=diegodario88&hide=stars"/></td>
+    </tr>   
+</table>
+</center>  
