@@ -1,4 +1,4 @@
-## Diego Dario, vulgo "logan"  
+## Diego Dario  
 
 Entusiasta da computação, Professor / Desenvolvedor e eterno aluno da tecnologia da informação.
 
