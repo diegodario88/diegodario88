@@ -3,14 +3,18 @@
 Entusiasta da computação, Professor / Desenvolvedor e eterno aluno da tecnologia da informação.
 
 Experiência em:
-- Linguagem de programação: PHP, Javascript, C#;
-- Banco de dados: Sql, MySql, NoSql;
-- Frameworks: CodeIgniter4, Laravel e Bootstrap;
-- Testes unitários;
+- Linguagem de programação: Javascript, PHP, C#;
+- Banco de dados: Sql, MySql, PostgreSQL;
+- Frameworks: NextJS, Express, Laravel, CodeIgniter4 e Bootstrap;
+- Testes unitários/integração;
 - Docker;
 - React;
+- React Native
 - Redis e Mongo;
 - Github e Git;
+- Linux
+- AWS Elastic Beanstalk
+- Google Cloud Platform
 
 Conhecimento de padrão de arquitetura: MVC;
 Conhecimento em metodologias Ágeis;
