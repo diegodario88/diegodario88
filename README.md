@@ -28,6 +28,7 @@ I'm an avid computer science student, programmer, educator, and lifelong learner
 ![Chakra](https://img.shields.io/badge/-Chakra-7F5AB6?style=flat&logo=chakra-ui&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 ![Red Hat](https://img.shields.io/badge/-Red%20Hat-EE0000?style=flat&logo=red-hat&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=diegodario88&repo=rusty-adventures)](https://github.com/diegodario88/rusty-adventures)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=diegodario88&repo=fedora-setup)](https://github.com/diegodario88/fedora-setup)
