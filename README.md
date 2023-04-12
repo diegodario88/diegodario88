@@ -21,13 +21,16 @@ I'm an avid computer science student, programmer, educator, and lifelong learner
 ![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=black)
 
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=diegodario88&repo=rusty-adventures)](https://github.com/diegodario88/rusty-adventures)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=diegodario88&repo=fedora-setup)](https://github.com/diegodario88/fedora-setup)
+
 ### Github stats
 
 <center>
 <table>
     <tr>
-        <td><img width="400px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegodario88&hide=html&layout=compact" /></td>
-        <td><img width="495px" align="left" src="https://github-readme-stats.vercel.app/api?username=diegodario88&hide=stars"/></td>
-    </tr>   
+        <td><img width="400px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegodario88&hide=html&layout=compact&langs_count=10"/></td>
+        <td><img width="495px" align="left" src="https://github-readme-stats.vercel.app/api?username=diegodario88&count_private=true&show_icons=true"/></td>
+    </tr>
 </table>
 </center> 
