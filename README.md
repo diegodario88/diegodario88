@@ -31,7 +31,7 @@ I'm an avid computer science student, programmer, educator, and lifelong learner
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=diegodario88&repo=rusty-adventures)](https://github.com/diegodario88/rusty-adventures)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=diegodario88&repo=fedora-setup)](https://github.com/diegodario88/fedora-setup)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=diegodario88&repo=fedora-post-install)](https://github.com/diegodario88/fedora-post-install)
 
 ### Github stats
 
