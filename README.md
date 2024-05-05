@@ -9,10 +9,6 @@ I'm an avid computer science student, programmer, educator, and lifelong learner
 
 ### Github stats
 <center>
-<table>
-    <tr>
-        <td><img width="400px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegodario88&hide=html,blade,vue,smarty,css,scss&langs_count=6"/></td>
-        <td><img width="495px" align="left" src="https://github-readme-stats.vercel.app/api?username=diegodario88&count_private=true&show_icons=true"/></td>
-    </tr>
-</table>
+    <img width="400px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegodario88&hide=html,blade,vue,smarty,css,scss&langs_count=6"/>
+    <img width="400px" align="left" src="https://github-readme-stats.vercel.app/api?username=diegodario88&count_private=true&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage"/>
 </center> 
