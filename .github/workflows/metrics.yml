@@ -110,7 +110,8 @@ jobs:
           plugin_stargazers: yes
           plugin_stargazers_worldmap: yes
           plugin_stargazers_worldmap_token: "${{ secrets.METRICS_TOKEN }}"
-          plugin_stargazers_sample: 8000
+          plugin_stargazers_sample: 400
+          plugin_stargazers_days: 3650
 
           config_animations: true
           config_base64: true
