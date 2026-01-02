@@ -97,6 +97,31 @@ jobs:
           name: "metrics-notable"
           path: "/metrics_renders/plugin-notable.svg"
 
+  generate-plugin-stargazers-worldmap:
+    name: "Generate stargazers worldmap"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "lowlighter/metrics@latest"
+        with:
+          token: "${{ secrets.METRICS_TOKEN }}"
+          filename: "stargazers-worldmap.svg"
+          base: ""
+
+          plugin_stargazers: yes
+          plugin_stargazers_worldmap: yes
+          plugin_stargazers_worldmap_token: "${{ secrets.METRICS_TOKEN }}"
+          plugin_stargazers_sample: 8000
+
+          config_animations: true
+          config_base64: true
+
+          output_action: "none"
+      - name: "Upload worldmap"
+        uses: "actions/upload-artifact@v4"
+        with:
+          name: "metrics-worldmap"
+          path: "/metrics_renders/stargazers-worldmap.svg"
+
   publish-metrics:
     name: "Publish metrics"
     needs:
@@ -104,6 +129,7 @@ jobs:
       - "generate-repositories-metrics"
       - "generate-plugin-languages-metrics"
       - "generate-plugin-notable-metrics"
+      - "generate-plugin-stargazers-worldmap"
     runs-on: "ubuntu-latest"
     permissions:
       contents: "write"

@@ -9,3 +9,4 @@ Driven Computer Science student and developer, dedicated to teaching and continu
 [![Languages plugin metrics](./metrics/plugin-languages.svg)](#)
 
 [![Notable contributions plugin metrics](./metrics/plugin-notable.svg)](#)
+[![Stargazers Worldmap  plugin metrics](./metrics/stargazers-worldmap.svg)](#)
