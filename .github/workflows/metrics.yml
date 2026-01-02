@@ -2,10 +2,7 @@ name: "Metrics"
 
 on:
   push:
-    branches: ["*"]
-    paths: [".github/workflows/metrics.yml"]
-  pull_request:
-    branches: ["*"]
+    branches: ["master", "main"]
     paths: [".github/workflows/metrics.yml"]
   schedule:
     - cron: "55 05 * * *"
@@ -21,140 +18,73 @@ jobs:
   generate-header-metrics:
     name: "Generate header metrics"
     runs-on: "ubuntu-latest"
-    permissions: {}
     steps:
       - uses: "lowlighter/metrics@latest"
         with:
-          # Core
+          token: "${{ secrets.METRICS_TOKEN }}"
+          filename: "header.svg"
+          base: "header"
           config_animations: true
           config_base64: true
-          config_display: "regular"
-          config_output: "svg"
-          config_timezone: "UTC"
-          experimental_features: "--optimize-svg"
-          filename: "header.*"
-          optimize: "css, xml, svg"
           output_action: "none"
-          template: "classic"
-          token: "${{ secrets.METRICS_TOKEN }}"
-          user: "${{ github.repository_owner }}"
-          # Base
-          base: "header"
-      - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v6"
+      - name: "Upload header"
+        uses: "actions/upload-artifact@v4"
         with:
-          name: "metrics"
-          path: "/metrics_renders/"
-          retention-days: 1
+          name: "metrics-header"
+          path: "/metrics_renders/header.svg"
 
   generate-repositories-metrics:
     name: "Generate repositories metrics"
     runs-on: "ubuntu-latest"
-    permissions: {}
     steps:
       - uses: "lowlighter/metrics@latest"
         with:
-          # Core
-          config_animations: true
-          config_base64: true
-          config_display: "regular"
-          config_output: "svg"
-          config_timezone: "UTC"
-          experimental_features: "--optimize-svg"
-          filename: "repositories.*"
-          optimize: "css, xml, svg"
-          output_action: "none"
-          template: "classic"
           token: "${{ secrets.METRICS_TOKEN }}"
-          user: "${{ github.repository_owner }}"
-          # Base
+          filename: "repositories.svg"
           base: "repositories"
-          repositories: 200
-          repositories_forks: false
-      - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v6"
+          output_action: "none"
+      - name: "Upload repositories"
+        uses: "actions/upload-artifact@v4"
         with:
-          name: "metrics"
-          path: "/metrics_renders/"
-          retention-days: 1
+          name: "metrics-repositories"
+          path: "/metrics_renders/repositories.svg"
 
   generate-plugin-languages-metrics:
     name: "Generate languages plugin metrics"
     runs-on: "ubuntu-latest"
-    permissions: {}
     steps:
       - uses: "lowlighter/metrics@latest"
         with:
-          # Core
-          config_animations: true
-          config_base64: true
-          config_display: "regular"
-          config_output: "svg"
-          config_timezone: "UTC"
-          experimental_features: "--optimize-svg"
-          filename: "plugin-languages.*"
-          optimize: "css, xml, svg"
-          output_action: "none"
-          template: "classic"
           token: "${{ secrets.METRICS_TOKEN }}"
-          user: "${{ github.repository_owner }}"
-          # Base
+          filename: "plugin-languages.svg"
           base: ""
-          # Languages plugin
           plugin_languages: true
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_categories: "markup, programming"
-          plugin_languages_colors: "github"
-          plugin_languages_indepth: false
-          plugin_languages_limit: 8
-          plugin_languages_other: false
-          plugin_languages_sections: "most-used"
-          plugin_languages_threshold: "0%"
-      - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v6"
+          output_action: "none"
+      - name: "Upload languages"
+        uses: "actions/upload-artifact@v4"
         with:
-          name: "metrics"
-          path: "/metrics_renders/"
-          retention-days: 1
+          name: "metrics-languages"
+          path: "/metrics_renders/plugin-languages.svg"
 
   generate-plugin-notable-metrics:
     name: "Generate notable contributions plugin metrics"
     runs-on: "ubuntu-latest"
-    permissions: {}
     steps:
       - uses: "lowlighter/metrics@latest"
         with:
-          # Core
-          config_animations: true
-          config_base64: true
-          config_display: "regular"
-          config_output: "svg"
-          config_timezone: "UTC"
-          experimental_features: "--optimize-svg"
-          filename: "plugin-notable.*"
-          optimize: "css, xml, svg"
-          output_action: "none"
-          template: "classic"
           token: "${{ secrets.METRICS_TOKEN }}"
-          user: "${{ github.repository_owner }}"
-          # Base
+          filename: "plugin-notable.svg"
           base: ""
-          # Notable contributions plugin
           plugin_notable: true
-          plugin_notable_from: "all"
-          plugin_notable_indepth: false
-          plugin_notable_repositories: true
-          plugin_notable_types: "commit"
-      - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v6"
+          output_action: "none"
+      - name: "Upload notable"
+        uses: "actions/upload-artifact@v4"
         with:
-          name: "metrics"
-          path: "/metrics_renders/"
-          retention-days: 1
+          name: "metrics-notable"
+          path: "/metrics_renders/plugin-notable.svg"
 
   publish-metrics:
     name: "Publish metrics"
-    if: "github.ref == 'refs/heads/main'"
     needs:
       - "generate-header-metrics"
       - "generate-repositories-metrics"
@@ -165,20 +95,23 @@ jobs:
       contents: "write"
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v6"
+        uses: "actions/checkout@v4"
+
+      - name: "Download all artifacts"
+        uses: "actions/download-artifact@v4"
         with:
-          ref: "${{ github.ref }}"
-      - name: "Download artifacts"
-        uses: "actions/download-artifact@v7"
-        with:
-          name: "metrics"
           path: "./metrics/"
+          pattern: "metrics-*"
+          merge-multiple: true
+
       - name: "Publish"
         run: |
-          git config --global user.name 'bot'
-          git config --global user.email 'noreply@acme.com'
-          if [ -n "$(git status --porcelain=v1 ./metrics/)" ]; then
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          if [ -d "./metrics" ] && [ -n "$(git status --porcelain ./metrics/)" ]; then
             git add ./metrics/
-            git commit -m "[skip ci] Metrics $(date -Iseconds)"
+            git commit -m "[skip ci] Metrics updated $(date -Iseconds)"
             git push
+          else
+            echo "No changes to commit"
           fi
