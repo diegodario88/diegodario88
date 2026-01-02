@@ -59,6 +59,10 @@ jobs:
           filename: "plugin-languages.svg"
           base: ""
           plugin_languages: true
+          plugin_languages_skipped: "html, css, scss"
+          plugin_languages_categories: "programming"
+          plugin_languages_details: "percentage"
+          plugin_languages_limit: 10
           output_action: "none"
       - name: "Upload languages"
         uses: "actions/upload-artifact@v4"
