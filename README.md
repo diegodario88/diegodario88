@@ -2,7 +2,7 @@
 
 ### About me
 
-I'm an avid computer science student, programmer, educator, and lifelong learner of information technology.
+Driven Computer Science student and developer, dedicated to teaching and continuously exploring the evolving world of technology.
 
 [![Header metrics](./metrics/header.svg)](#)
 [![Repositories metrics](./metrics/repositories.svg)](#)
