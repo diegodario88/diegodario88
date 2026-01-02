@@ -41,7 +41,7 @@ jobs:
           # Base
           base: "header"
       - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v3"
+        uses: "actions/upload-artifact@v4"
         with:
           name: "metrics"
           path: "/metrics_renders/"
@@ -72,7 +72,7 @@ jobs:
           repositories: 200
           repositories_forks: false
       - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v3"
+        uses: "actions/upload-artifact@v4"
         with:
           name: "metrics"
           path: "/metrics_renders/"
@@ -111,7 +111,7 @@ jobs:
           plugin_languages_sections: "most-used"
           plugin_languages_threshold: "0%"
       - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v3"
+        uses: "actions/upload-artifact@v4"
         with:
           name: "metrics"
           path: "/metrics_renders/"
@@ -146,7 +146,7 @@ jobs:
           plugin_notable_repositories: true
           plugin_notable_types: "commit"
       - name: "Upload artifacts"
-        uses: "actions/upload-artifact@v3"
+        uses: "actions/upload-artifact@v4"
         with:
           name: "metrics"
           path: "/metrics_renders/"
@@ -169,7 +169,7 @@ jobs:
         with:
           ref: "${{ github.ref }}"
       - name: "Download artifacts"
-        uses: "actions/download-artifact@v3"
+        uses: "actions/download-artifact@v4"
         with:
           name: "metrics"
           path: "./metrics/"
