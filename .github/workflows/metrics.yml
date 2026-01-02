@@ -107,10 +107,11 @@ jobs:
           filename: "stargazers-worldmap.svg"
           base: ""
 
+          plugin_stargazers_charts: no
           plugin_stargazers: yes
           plugin_stargazers_worldmap: yes
-          plugin_stargazers_worldmap_token: "${{ secrets.METRICS_TOKEN }}"
-          plugin_stargazers_sample: 400
+          plugin_stargazers_worldmap_token: "${{ secrets.GOOGLE_MAP_TOKEN }}"
+          plugin_stargazers_sample: 200
           plugin_stargazers_days: 3650
 
           config_animations: true
