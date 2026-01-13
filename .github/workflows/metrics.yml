@@ -28,7 +28,7 @@ jobs:
           config_base64: true
           output_action: "none"
       - name: "Upload header"
-        uses: "actions/upload-artifact@v4"
+        uses: "actions/upload-artifact@v6"
         with:
           name: "metrics-header"
           path: "/metrics_renders/header.svg"
@@ -44,7 +44,7 @@ jobs:
           base: "repositories"
           output_action: "none"
       - name: "Upload repositories"
-        uses: "actions/upload-artifact@v4"
+        uses: "actions/upload-artifact@v6"
         with:
           name: "metrics-repositories"
           path: "/metrics_renders/repositories.svg"
@@ -75,7 +75,7 @@ jobs:
 
           output_action: "none"
       - name: "Upload languages"
-        uses: "actions/upload-artifact@v4"
+        uses: "actions/upload-artifact@v6"
         with:
           name: "metrics-languages"
           path: "/metrics_renders/plugin-languages.svg"
@@ -92,7 +92,7 @@ jobs:
           plugin_notable: true
           output_action: "none"
       - name: "Upload notable"
-        uses: "actions/upload-artifact@v4"
+        uses: "actions/upload-artifact@v6"
         with:
           name: "metrics-notable"
           path: "/metrics_renders/plugin-notable.svg"
@@ -119,7 +119,7 @@ jobs:
 
           output_action: "none"
       - name: "Upload worldmap"
-        uses: "actions/upload-artifact@v4"
+        uses: "actions/upload-artifact@v6"
         with:
           name: "metrics-worldmap"
           path: "/metrics_renders/stargazers-worldmap.svg"
